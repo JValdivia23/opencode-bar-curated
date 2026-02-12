@@ -201,16 +201,16 @@ opencodebar status --provider copilot --allow-sensitive --json
 #### Table Output Example
 
 ```bash
-$ opencodebar status
-Provider              Type             Usage       Key Metrics
-─────────────────────────────────────────────────────────────────────────────────
-Claude                Quota-based      77%         23/100 remaining
-Codex                 Quota-based      0%          100/100 remaining
-Gemini CLI (user1@gmail.com) Quota-based      0%          100% remaining
-Gemini CLI (user2@company.com) Quota-based    15%         85% remaining
-Kimi for Coding       Quota-based      26%         74/100 remaining
-OpenCode Zen          Pay-as-you-go    -           $12.50 spent
-OpenRouter            Pay-as-you-go    -           $37.42 spent
+$ opencodebar
+Provider            Refresh                           Usage     Key Metrics
+──────────────────────────────────────────────────────────────────────────────────────────
+Antigravity         Claude: in 5d (02/17)             60%       40/100 remaining
+                    Gemini: in 2h (18:20)             0%        100/100 remaining
+ChatGPT             Weekly: in 5d (02/18)             100%      0/100 remaining
+Gemini CLI          -                                 0%        100/100 remaining
+GitHub Copilot      Monthly: in 16d (02/28)           37%       189/300 remaining
+OpenCode Zen        -                                 -         $0.00 spent
+OpenRouter          -                                 -         $0.00 spent
 ```
 
 #### JSON Output Example
