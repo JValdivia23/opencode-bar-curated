@@ -36,6 +36,13 @@ brew tap JValdivia23/opencode-bar-curated
 brew install --cask opencode-bar-curated
 ```
 
+> **Note:** Since this app is ad-hoc signed, macOS Gatekeeper may block the first launch. 
+> To open it:
+> 1. Right-click "OpenCode Bar.app" in Applications
+> 2. Select "Open"
+> 3. Click "Open" in the dialog
+
+
 ### Download
 
 Download the latest `.dmg` file from the [**Releases**](https://github.com/JValdivia23/opencode-bar-curated/releases/latest) page.
