@@ -156,12 +156,16 @@ OpenCode Bar includes a powerful CLI for querying provider usage programmaticall
 
 #### Installation
 
+If you installed via Homebrew, the `opencodebar` command is already available in your path.
+
+Otherwise, you can install the CLI manually:
+
 ```bash
 # Option 1: Install via menu bar app
 # Click "Install CLI" from the Settings menu
 
-# Option 2: Manual installation
-bash scripts/install-cli.sh
+# Option 2: Manual symlink
+ln -s "/Applications/OpenCode Bar.app/Contents/MacOS/opencodebar-cli" /usr/local/bin/opencodebar
 
 # Verify installation
 opencodebar --help
@@ -169,12 +173,17 @@ opencodebar --help
 
 #### Commands
 
+The CLI defaults to "Safe Mode" (`--no-sensitive`), which means it will **not** attempt to access browser cookies or other sensitive data sources unless explicitly requested.
+
 ```bash
-# Show all providers and their usage (default command)
+# Show all providers and their usage (default command, safe mode)
 opencodebar status
 
 # Query selected provider only (recommended for least privilege)
 opencodebar status --provider copilot
+
+# Enable browser-cookie fallback for Copilot (requires explicit flag)
+opencodebar status --provider copilot --allow-sensitive
 
 # List all available providers
 opencodebar list
@@ -185,10 +194,8 @@ opencodebar provider gemini_cli
 
 # Output as JSON (for scripting)
 opencodebar status --json
-opencodebar status --provider copilot --no-sensitive --json
+opencodebar status --provider copilot --json
 opencodebar status --provider copilot --allow-sensitive --json
-opencodebar provider claude --json
-opencodebar list --json
 ```
 
 #### Table Output Example
