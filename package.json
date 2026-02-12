@@ -1,0 +1,20 @@
+{
+  "name": "opencode-bar-curated-ci",
+  "version": "1.0.0",
+  "description": "CI/CD tools for OpenCode Bar (curated fork)",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JValdivia23/opencode-bar-curated.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JValdivia23/opencode-bar-curated/issues"
+  },
+  "homepage": "https://github.com/JValdivia23/opencode-bar-curated",
+  "scripts": {
+    "lint:actions": "for f in .github/workflows/*.yml; do echo \"Validating $f...\"; action-validator \"$f\"; done"
+  },
+  "devDependencies": {
+    "@action-validator/cli": "^0.6.0"
+  }
+}
